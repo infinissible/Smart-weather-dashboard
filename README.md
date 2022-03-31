@@ -9,7 +9,7 @@ A website that offer a weather forecast in the city searched
 * JavaScript
 
 ## Website
-
+https://infinissible.github.io/Smart-weather-dashboard/
 
 ## Screenshot
 <img src="" alt="" />
