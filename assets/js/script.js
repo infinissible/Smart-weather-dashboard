@@ -214,7 +214,7 @@ var cardsDate = function() {
     for (var i = 0; i < 5; i++) {
 
         var dateContainer = document.createElement("div");
-        dateContainer.classList = "container mx-1 h-64 w-2/3 bg-sky-900 p-1";
+        dateContainer.classList = "container mx-1 h-auto w-2/3 bg-sky-900 p-1";
         dateContainer.setAttribute("data-card-container", i);
         cardsContainer.append(dateContainer);
 

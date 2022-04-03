@@ -12,4 +12,4 @@ A website that offer a weather forecast in the city searched
 https://infinissible.github.io/Smart-weather-dashboard/
 
 ## Screenshot
-<img src="" alt="" />
+<img src="./weather-dashboard.gif" alt="" />
