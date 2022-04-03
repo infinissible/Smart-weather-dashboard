@@ -17,59 +17,40 @@
         <div class="container border-b-2 box-border border-gray-400">
             <h1 class="text-3xl font-bold">
                 Search for a City:
-            </h1>     
-            <input type="text" class="text-xl p-2 my-4 border-slate-400 rounded-md border-2 w-full border-content h-14" placeholder="search city">
-            <button type="submit" class="text-white bg-blue-500 w-full border mb-3 rounded-lg h-10">Search</button>
+            </h1>  
+          <form id="city-form">
+            <input type="text" id="cityname" class="text-xl p-2 my-4 border-slate-400 rounded-md border-2 w-full border-content h-14" placeholder="search city">
+            <button type="submit" id="searchBtn" class="text-white bg-blue-500 w-full border mb-3 rounded-lg h-10">Search</button>
+          </form>   
+            
         </div>
-        <div class="container mt-4">
-            <div class="border p-2 my-3 bg-gray-400 rounded-lg">
-                history 1
-            </div> 
-            <div class="border p-2 my-3 bg-gray-400 rounded-lg">
-                history 2
-            </div>             
+        <div id="history-container" class="container mt-4">            
         </div>    
     </div>
     <div class="container border-content basis-3/4 h-full p-2 mr-1 mt-2">
       <div class="container p-2 border-2 border-gray-500">
-        <h1 class="text-3xl font-bold leading-loose">Riverside (3/3/2022)</h1>
-        <p class="text-2xl leading-10">Temp: </p>
-        <p class="text-2xl leading-10">Wind: </p>
-        <p class="text-2xl leading-10">Humidity:</p>
-        <p class="text-2xl leading-10">UV Index:</p>
+        <div class="container flex flex-row items-center">
+          <h1 id ="main-city" class="text-4xl font-bold leading-loose">Search City</h1> 
+          <span id="today" class="text-4xl font-bold leading-loose"></span>
+          <i class="ml-4"><img id="mainIcon" class="w-3/5"></i>
+        </div>
+        
+        <div class="container m-3 my-6">
+          <p class="text-2xl my-3 leading-10 flex flex-row items-center">Temp:<span id="mainTemp" class="ml-4 text-2xl">&#8457</span></p>
+          <p class="text-2xl my-3 leading-10 flex flex-row items-center">Wind: <span id="mainWind" class="ml-4 text-2xl">MPH</span></p>
+          <p class="text-2xl my-3 leading-10 flex flex-row items-center">Humidity:<span id="mainHum" class="ml-4 text-2xl">%</span></p>
+          <p class="text-2xl my-3 leading-10 flex flex-row items-center">UV Index:           
+            <span id="mainUV" class="ml-2 text-2xl rounded-lg items-center px-3 text-white"></span>        
+          </p>        
+                
+        </div>
+        
       </div>
       <div class="container h-80 mt-4 flex flex-wrap">
-        <div class="container h-0">
+        <div class="container h-0 mb-4">
             <h1 class="text-2xl font-bold">5-Day Forecast:</h1>
         </div>
-        <div class="container flex justify-between">
-            <div class="container h-56 w-52 bg-sky-900 p-1">
-              <h1 class="text-2xl text-white font-bold leading-loose">3/31/2022</h1>
-              <p class="text-xl text-white leading-10">Temp: </p>
-              <p class="text-xl text-white leading-10">Wind: </p>
-              <p class="text-xl text-white leading-10">Humidity:</p>
-            </div>
-            <div class="container border-2 h-56 w-52 bg-sky-900 p-1">
-                <h1 class="text-2xl text-white font-bold leading-loose">3/31/2022</h1>
-                <p class="text-xl text-white leading-10">Temp: </p>
-                <p class="text-xl text-white leading-10">Wind: </p>
-                <p class="text-xl text-white leading-10">Humidity:</p>
-              </div><div class="container border-2 h-56 w-52 bg-sky-900 p-1">
-                <h1 class="text-2xl text-white font-bold leading-loose">3/31/2022</h1>
-                <p class="text-xl text-white leading-10">Temp: </p>
-                <p class="text-xl text-white leading-10">Wind: </p>
-                <p class="text-xl text-white leading-10">Humidity:</p>
-              </div><div class="container border-2 h-56 w-52 bg-sky-900 p-1">
-                <h1 class="text-2xl text-white font-bold leading-loose">3/31/2022</h1>
-                <p class="text-xl text-white leading-10">Temp: </p>
-                <p class="text-xl text-white leading-10">Wind: </p>
-                <p class="text-xl text-white leading-10">Humidity:</p>
-              </div><div class="container border-2 h-56 w-52 bg-sky-900 p-1">
-                <h1 class="text-2xl text-white font-bold leading-loose">3/31/2022</h1>
-                <p class="text-xl text-white leading-10">Temp: </p>
-                <p class="text-xl text-white leading-10">Wind: </p>
-                <p class="text-xl text-white leading-10">Humidity:</p>
-              </div>
+        <div id="card-box" class="container flex justify-between">            
         </div>        
         
       </div>
@@ -82,6 +63,7 @@
   </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
