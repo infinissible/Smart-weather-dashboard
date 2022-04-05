@@ -99,16 +99,16 @@ var uvDecider = function(index) {
     var uv = index;            
     mainUV.textContent = uv;              
 
-    if (uv <= 2) {
+    if (uv < 3) {
         mainUV.classList.add("bg-green-700");            
 
-    } else if (uv >=3 && uv <= 5) {
+    } else if (uv >=3 && uv < 6) {
         mainUV.classList.add("bg-yellow-700");
     
-    } else if (uv >=6 && uv <= 7) {
+    } else if (uv >=6 && uv < 8) {
         mainUV.classList.add("bg-orange-700");
     
-    } else if (uv >=8 && uv <= 10) {
+    } else if (uv >=8 && uv < 11) {
         mainUV.classList.add("bg-red-700");
    
     } else if (uv >= 11) {
