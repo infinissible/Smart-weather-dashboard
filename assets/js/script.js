@@ -97,23 +97,26 @@ var geoCoding = function(cityname) {
 var uvDecider = function(index) {
 
     var uv = index;            
-    mainUV.textContent = uv;              
-
+    mainUV.textContent = uv;      
+    // var bgColor = mainUV.style.backgroundColor;   
+    
     if (uv < 3) {
-        mainUV.classList.add("bg-green-700");            
-
-    } else if (uv >=3 && uv < 6) {
-        mainUV.classList.add("bg-yellow-700");
+        mainUV.style.backgroundColor = "#15803d"; 
+        
+    } else if (uv >=3 && uv < 6) {      
+        mainUV.style.backgroundColor = "#a16207";
+  
+    } else if (uv >=6 && uv < 8) {     
+        mainUV.style.backgroundColor = "#c2410c";
+     
+    } else if (uv >=8 && uv < 11) { 
+        mainUV.style.backgroundColor = "#b91c1c";
+      
+    } else if (uv >= 11) {      
+        mainUV.style.backgroundColor = "#6d28d9";
+  
+    } return;
     
-    } else if (uv >=6 && uv < 8) {
-        mainUV.classList.add("bg-orange-700");
-    
-    } else if (uv >=8 && uv < 11) {
-        mainUV.classList.add("bg-red-700");
-   
-    } else if (uv >= 11) {
-        mainUV.classList.add("bg-violet-700");
-    }
 
 };
 
@@ -180,7 +183,7 @@ var forecastAPI = function(lat, lon) {
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
                         
-            uvDecider(data.current.uvi);          
+            uvDecider(data.daily[0].uvi);          
    
             cardIconSelect(data.daily);
 
@@ -189,6 +192,7 @@ var forecastAPI = function(lat, lon) {
             forecastWind(data.daily);
 
             forecastHum(data.daily);
+            
         })
     })
 };
