@@ -132,7 +132,7 @@ var cardIconSelect = function(result) {
 
         var dataCard = document.querySelector("div[data-card-container='" + i + "']");
         var cardText = dataCard.querySelector("img");    
-        var addIcon = cardText.setAttribute("src", "http://openweathermap.org/img/wn/" + iconId + "@2x.png")
+        var addIcon = cardText.setAttribute("src", "https://openweathermap.org/img/wn/" + iconId + "@2x.png")
         cardText.textContent = addIcon;
     }    
 };
@@ -257,7 +257,7 @@ cardsDate();
 
 var mainWeatherIcon = function(iconNum) {
 
-    mainIconImg.setAttribute("src", "http://openweathermap.org/img/wn/" + iconNum + "@2x.png")
+    mainIconImg.setAttribute("src", "https://openweathermap.org/img/wn/" + iconNum + "@2x.png")
 }
 
 var displayCity = function(cityname) {
