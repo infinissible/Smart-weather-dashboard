@@ -13,6 +13,8 @@ var historyContainer = document.querySelector("#history-container")
 var historyStorage = [];
 var counter = 0;
 
+
+//Save and load search history to localstorage//
 var historyEl = function(cityname) {
     var historyText = document.createElement("button");
     historyText.setAttribute("data-history", counter);
@@ -60,6 +62,7 @@ var loadHistory = function() {
     }   
 }
     
+// Get geocoding APIs from the website//
 
 var geoCoding = function(cityname) {
 
@@ -94,11 +97,12 @@ var geoCoding = function(cityname) {
     })
 }
 
+// Get API for the UV index//
+
 var uvDecider = function(index) {
 
     var uv = index;            
     mainUV.textContent = uv;      
-    // var bgColor = mainUV.style.backgroundColor;   
     
     if (uv < 3) {
         mainUV.style.backgroundColor = "#15803d"; 
@@ -116,9 +120,10 @@ var uvDecider = function(index) {
         mainUV.style.backgroundColor = "#6d28d9";
   
     } return;
-    
 
 };
+
+// Send API results to the 5 forecast boxex //
 
 var cardIconSelect = function(result) {
     
@@ -197,6 +202,8 @@ var forecastAPI = function(lat, lon) {
     })
 };
 
+
+// Submit event handler//
 var formSubmitHandler = function(event) {
     event.preventDefault();
 
@@ -205,6 +212,7 @@ var formSubmitHandler = function(event) {
     geoCoding(cityInput);           
 }
 
+// Display results to the main container of today's weather//
 var currentDate = function() {
 
     var now = moment().format("(MM/DD/YYYY)");
@@ -260,6 +268,7 @@ var displayCity = function(cityname) {
 
 }
 
+// Eventlistener//
 loadHistory();
 cityFormEl.addEventListener("submit", formSubmitHandler);
 

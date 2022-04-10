@@ -12,6 +12,8 @@
   <header class="text-center">
       <h1 class="text-5xl p-6 text-white bg-gradient-to-r from-blue-300 to-indigo-700">Weather Dashboard</h1>
   </header>
+
+  <!-- Search box in the lefthand -->
   <div class="container-xl pt-2 flex flex-row mx-auto">
     <div class="container box-border basis-1/4 p-3 mr-1">
         <div class="container border-b-2 box-border border-gray-400">
@@ -22,11 +24,12 @@
             <input type="text" id="cityname" class="text-xl p-2 my-4 border-slate-400 rounded-md border-2 w-full border-content h-14" placeholder="search city">
             <button type="submit" id="searchBtn" class="text-white bg-blue-500 w-full border mb-3 rounded-lg h-10">Search</button>
           </form>   
-            
         </div>
         <div id="history-container" class="container mt-4">            
         </div>    
     </div>
+
+    <!-- Main display box in the righthand -->
     <div class="container border-content basis-3/4 h-full p-2 mr-1 mt-2">
       <div class="container p-2 border-2 border-gray-500">
         <div class="container flex flex-row items-center">
@@ -41,27 +44,21 @@
           <p class="text-2xl my-3 leading-10 flex flex-row items-center">Humidity:<span id="mainHum" class="ml-4 text-2xl">%</span></p>
           <p class="text-2xl my-3 leading-10 flex flex-row items-center">UV Index:           
             <span id="mainUV" class="ml-2 text-2xl rounded-lg items-center px-3 text-white"></span>        
-          </p>        
-                
+          </p>   
         </div>
-        
       </div>
+
+      <!-- Forecast display container at the bottom of the righthand box -->
       <div class="container h-80 mt-4 flex flex-wrap">
         <div class="container h-0 mb-4">
             <h1 class="text-2xl font-bold">5-Day Forecast:</h1>
         </div>
         <div id="card-box" class="container flex justify-between">            
-        </div>        
-        
+        </div>  
       </div>
-        
+    </div>
   </div>
   
-  
-  
-
-  </div>
-  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/script.js"></script>
