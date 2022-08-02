@@ -13,3 +13,12 @@ https://infinissible.github.io/Smart-weather-dashboard/
 
 ## Screenshot
 <img src="./weather-dashboard.gif" alt="" />
+
+## Questions
+
+Find me on GitHub
+infinissible
+repo: https://github.com/infinissible
+
+Email me with any questions
+infinissible@gmail.com
